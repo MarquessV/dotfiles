@@ -1,0 +1,10 @@
+# rofi
+
+rofi.modi:      window,run
+rofi.opacity:   10
+rofi.width:     50
+rofi.lines:     10
+rofi.columns:   1
+rofi.font:      inconsolata 12
+
+rofi.color-normal #ffffff, #ffffff, #ffffff, #ffffff, #ffffff

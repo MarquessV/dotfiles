@@ -1,0 +1,12 @@
+rofi.color-enabled: true
+rofi.color-window: #282a36, #44475a, #44475a
+rofi.color-normal: #282a36, #f8f8f2, #282a36, #282a36, #FF79C6
+rofi.color-active: #f1fa8c, #44475a, #8BE9FD, #44475a, #FF79C6
+rofi.color-urgent: #f1fa8c, #44475a, #8BE9FD, #44475a, #FF79C6
+rofi.lines: 3
+rofi.eh: 1
+rofi.width: 25
+rofi.bw: 1
+rofi.font: Inconsolata 10
+rofi.terminal: termite
+rofi.separator-style: solid
