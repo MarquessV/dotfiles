@@ -27,7 +27,9 @@ color6    =  #8BE9FD
 color14   =  #9AEDFE
 color7    =  #BFBFBF
 color15   =  #E6E6E6
+color20   =  #44475a
+color21   =  #282a36
 
 [options]
 
-font = Inconsolata Nerd Font 14px
+font = Inconsolata Nerd Font Mono 14px
