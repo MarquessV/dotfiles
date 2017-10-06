@@ -50,7 +50,7 @@ modules-left = i3
 modules-center = mpd
 modules-right = memory cpu wlan temperature date powermenu
 
-tray-position = right
+tray-position = off
 tray-padding = 0
 tray-detached = false
 ;tray-transparent = true
