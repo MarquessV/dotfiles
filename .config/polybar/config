@@ -46,11 +46,11 @@ font-0 = Inconsolata:antialias=true:pixelsize=10;2
 font-1 = FontAwesome:antialias=true:pixelsize=12;3
 font-2 = Inconsolata Nerd Font Mono:antialias=true:pixelsize=18;4
 
-modules-left = i3
-modules-center = mpd
-modules-right = memory cpu wlan temperature date powermenu
+modules-left = i3 
+modules-center = 
+modules-right = battery memory cpu wlan temperature date powermenu
 
-tray-position = off
+tray-position = right
 tray-padding = 0
 tray-detached = false
 ;tray-transparent = true
@@ -69,6 +69,26 @@ tray-background = #ff79c6
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/prev]
+type = custom/text
+
+content = " "
+click-left = playerctl previous
+
+[module/spotify]
+type = custom/script
+
+exec = ~/.config/polybar//getsonginfo.sh
+
+click-left = playerctl play-pause
+interval = 1
+
+[module/next]
+type = custom/text
+
+content = " "
+click-left = playerctl next
 
 [module/xwindow]
 type = internal/xwindow
@@ -313,26 +333,30 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging = <label-charging>
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+label-charging = "  %percentage%% "
+label-discharging = "%percentage%% "
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
+animation-charging-framerate = 0
+
+format-charging-background = ${colors.foreground}
+format-discharging-background = ${colors.foreground}
+format-charging-foreground = ${colors.background}
+format-discharging-foreground = ${colors.background}
+format-background = #ff5555
+format-charging-underline = #50fa7b
+format-discharging-underline = ${colors.foreground}
+padding = 2
 
 [module/temperature]
 type = internal/temperature
@@ -344,18 +368,15 @@ format-underline = #50fa7b
 format-background = #50fa7b
 format-foreground = ${colors.background}
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format-warn-underline = #50fa7b
+format-warn-background = #50fa7b
 label-foreground = ${colors.background}
 
 label = "%temperature% "
-label-warn = "%temperature% "
+label-warn = "%temperature%! "
 label-warn-foreground = ${colors.background}
 
 ramp-0 = " "
-;ramp-1 = " "
-;ramp-2 = " "
-;ramp-3 = " "
-;ramp-4 = " "
 ramp-foreground = ${colors.background}
 
 [module/powermenu]

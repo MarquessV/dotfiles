@@ -21,7 +21,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
-let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_experimental_template_highlight = 1
 
 Plugin 'fugitive.vim'
 
@@ -34,7 +34,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_compiler_options=' -std=c++11'
+let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
+let g:syntastic_cpp_compiler_options=' -std=c++11 -Wall'
 let g:syntastic_cpp_check_header=1
 
 " vim-airline
@@ -50,6 +51,38 @@ let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_switch_buffer = 0
+
+Plugin 'Yggdroot/indentLine'
+let g:indentLine_color_term = 20
+let g:indetLine_char = '|'
+let g:indentLine_bgcolor_term = 21
+let g:indentLine_noConcealCursor=1
+
+Plugin 'lervag/vimtex'
+let g:vimtex_compiler_latexmk = {'callback' : 0}
+let g:tex_conceal = "0"
+let g:vimtex_view_method='zathura'
+
+Plugin 'leafgarland/typescript-vim'
+
+Plugin 'rhysd/vim-grammarous'
+let g:grammarous#default_comments_only_filetypes = {
+	\ '*' : 1, 'markdown': 0,
+	\}
+
+Plugin 'dbmrq/vim-ditto'
+au FileType markdown,text,tex DittoOn  " Turn on Ditto's autocmds
+
+nmap <leader>di <Plug>ToggleDitto      " Turn it on and off
+
+nmap =d <Plug>DittoNext                " Jump to the next word
+nmap -d <Plug>DittoPrev                " Jump to the previous word
+nmap +d <Plug>DittoGood                " Ignore the word under the cursor
+nmap _d <Plug>DittoBad                 " Stop ignoring the word under the cursor
+nmap ]d <Plug>DittoMore                " Show the next matches
+nmap [d <Plug>DittoLess                " Show the previous matches
+
+Plugin 'reedes/vim-wordy'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,7 +100,7 @@ highlight StatusLine ctermbg=20
 set cursorline
 highlight CursorLine ctermbg=20
 highlight CursorLineNr ctermbg=20 ctermfg=4
-set colorcolumn=80
+set colorcolumn=120
 highlight ColorColumn ctermbg=20
 
 "Highlighting of vertical split and status line

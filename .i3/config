@@ -25,9 +25,10 @@ font pango: Inconsolata 9
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Custom
-bindsym Mod1+Ctrl+l exec i3lock -B=5 -k --insidevercolor=282a36BF --insidecolor=282a36BF --insidewrongcolor=ff5555BF --ringcolor=44475aBF --ringvercolor=8BE9FDBF --ringwrongcolor=44475aBF --linecolor=282a36BF --separatorcolor=282a36BF --textcolor=f8f8f2FF --keyhlcolor=50fa7bBF --bshlcolor=ff5555BF --timecolor=f8f8f2FF --datecolor=f8f8f2FF --timefont="Inconsolata" --datefont="Inconsolata" --wrongtext="Incorrect" --veriftext="Verifying" --textsize=24 --indicator
+bindsym Mod1+Ctrl+l exec /tmp/i3lock-color/x86_64-pc-linux-gnu/i3lock -B=5 -k --insidevercolor=282a36BF --insidecolor=282a36BF --insidewrongcolor=ff5555BF --ringcolor=44475aBF --ringvercolor=8BE9FDBF --ringwrongcolor=44475aBF --linecolor=282a36BF --separatorcolor=282a36BF --textcolor=f8f8f2FF --keyhlcolor=50fa7bBF --bshlcolor=ff5555BF --timecolor=f8f8f2FF --datecolor=f8f8f2FF --timefont="Inconsolata" --datefont="Inconsolata" --wrongtext="Incorrect" --veriftext="Verifying" --textsize=24 --indicator --datestr="%A %B %d %Y"
 
-
+bindsym Mod1+less move container to output left
+bindsym Mod1+greater move container to output right
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -253,7 +254,7 @@ bindsym Mod1+r mode "resize"
 #######################################################################
 #STARTUP
 exec --no-startup-id '/home/marquess/visfifo.sh'
-exec --no-startup-id i3-msg 'workspace 4; exec termite -e ncmpcpp'
+exec --no-startup-id i3-msg 'workspace 4; spotify'
 exec --no-startup-id i3-msg 'workspace 2; exec termite'
 exec --no-startup-id i3-msg 'workspace 3; exec termite'
 exec --no-startup-id i3-msg 'workspace 1; exec chromium-browser'
