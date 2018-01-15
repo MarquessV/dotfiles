@@ -37,6 +37,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
 let g:syntastic_cpp_compiler_options=' -std=c++11 -Wall'
 let g:syntastic_cpp_check_header=1
+let g:syntastic_quiet_messages = { "regex": 'has a constructor with 1 argument that is not explicit' }
 
 " vim-airline
 Plugin 'vim-airline/vim-airline'
