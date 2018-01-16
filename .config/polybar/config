@@ -353,11 +353,12 @@ animation-charging-2 = " "
 animation-charging-3 = " "
 animation-charging-4 = " "
 
-animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
 format-charging-background = ${colors.foreground}
-format-charging-foreground = #282a36
+format-charging-foreground = #262a36
+label-charging-foreground = #262a36
+animation-charging-foreground = #50fa7b
 format-discharging-background = ${colors.foreground}
 format-discharging-foreground = ${colors.background}
 format-full-foreground = #282a36
