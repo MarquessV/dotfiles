@@ -2,9 +2,18 @@
 
 rofi.modi:      window,run
 rofi.opacity:   10
-rofi.width:     50
-rofi.lines:     10
+rofi.width:     25
+rofi.lines:     3
 rofi.columns:   1
-rofi.font:      inconsolata 12
+rofi.font:      inconsolata nerd font mono 9
+rofi.eh: 1
+rofi.bw: 1
+rofi.terminal: urxvt
+rofi.separator-style: solid
 
-rofi.color-normal #ffffff, #ffffff, #ffffff, #ffffff, #ffffff
+rofi.color-enabled: true
+rofi.color-window: #282a36, #44475a, #44475a
+rofi.color-normal: #282a36, #f8f8f2, #282a36, #282a36, #FF79C6
+rofi.color-active: #f1fa8c, #44475a, #8BE9FD, #44475a, #FF79C6
+rofi.color-urgent: #f1fa8c, #44475a, #8BE9FD, #44475a, #FF79C6
+

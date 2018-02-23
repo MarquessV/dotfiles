@@ -1,6 +1,6 @@
-set-font Inconsolata 10
-set-default-fg "#f8f8f2"
-set-default-bg "#282a36"
+set font Inconsolata Nerd Font 10
+set default-fg "#f8f8f2"
+set default-bg "#282a36"
 
 set recolor-lightcolor "#282a36"
 set recolor-darkcolor "#f8f8f2"
